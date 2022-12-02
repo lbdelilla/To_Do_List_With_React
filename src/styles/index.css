@@ -1,12 +1,104 @@
+h1 {
+    font-family: 'Nerko One', cursive;
+    color: #f6c0be;
+    text-shadow: 2px 1px 1px #3e8baa;
+    font-size: 68px;
+}
 
-/* 
+body {
+    background-color: #99dbd9;
+}
 
-    You can write your own styles here...
+.footer{
+    font-family: 'Nerko One', cursive;
+    color: #f6c0be;
+    text-shadow: 2px 1px 1px #3e8baa;
+    font-size: 25px;
+    font-weight: 100;
+    
+}
+
+.taskManager {
+    background-color: #f0e5c7;
+    height: 450px;
+    width: 400px;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px grey;
     
     
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+}
 
-*/
+input {
+    margin: 30px 10px 10px 0px;
+    width: 290px;
+    border: 3px solid #99dbd9;;
+    border-radius: 8px;
+    font-family: 'Nerko One', cursive;
+    background-color:  #fff1f0;
+    outline: none;
+    font-size: 22px;
+    color:#3e8baa  
+}
+
+.line{
+    width: 350px;
+    margin: 10px auto;
+    color: #3e8baa;
+    opacity: 0.2;
+}
+
+p{
+    font-family: 'Nerko One', cursive;
+    color:#3e8baa;
+    font-size: 25px;
+    margin: 0px 0px 0px 25px;
+}
+
+.button-1 {
+  background-color: #99dbd9;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: inline-block;
+  font-family: 'Nerko One', cursive;
+  font-size: 20px;
+  height: 40px;
+  width: 50px;
+  box-shadow: 1px 1px 4px #aeb4b4;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color:  #67cfcc;
+}
+
+.cross{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    background-color:#99dbd9;
+    border-radius: 8px;
+    border:none;
+    box-shadow: 1px 1px 4px #aeb4b4; 
+    margin-right: 25px;
+
+}
+
+.cross:hover,
+.cross:focus {
+  background-color:  #67cfcc;
+}
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.toDoList{
+    display: flex;
+    flex-direction: column;
+}
