@@ -1,33 +1,60 @@
 import React, {useState} from "react";
+import { useEffect } from "react/cjs/react.production.min";
 
 
 
 
 const AddTask = () => {
-    const [value, setValue] = React.useState('');
-    const [list, setList] = React.useState('');
+    const [inputValue, setInputValue] = React.useState('');
+    const [toDoList, setToDoList] = React.useState(['Eat']);
+    
 
-    const NewTask = (task) => {
-        
+   {/*useEffect(() => {
+       
+   });*/}
+    function tasker () {
+        if(inputValue.length != 0){
+            setToDoList([...toDoList, inputValue]);
+            setInputValue('')
+        }
     }
     
-    
-    return(
-        <div className=" text-center">
-			<input type="text" onChange={e => setValue (e.target.value)} ></input>
-			<button className="button-1" role="button" type="submit"> Add </button>
-			<hr className="line"/>
-        </div>
+    const deleteTask = (index) => {
+        let deletedToDo = [...toDoList];
+        deletedToDo.splice (index, 1);
 
+        setToDoList(deletedToDo);
+    }
+
+    return(
+        <div className="taskManager text-center">	
+            <div className="otrodiv">	
+                <div className=" text-center">
+                    <input value={inputValue} type="text" onKeyPress={(e)=>e.key=="Enter" ? tasker() : null} onChange= {(e) => setInputValue(e.target.value)} />
+                    <button className="button-1" role="button" type="submit" > Add </button>
+                    <hr className="line"/>
+                </div>
+                <div className="content">
+                    <ul>
+                        {toDoList.map((task, index)=> {
+                        return(
+                        <li  key={index}> {task} <i onClick={()=>deleteTask(index)} className="fa-solid fa-xmark"></i></li>)})}
+                    </ul>		
+                </div>	
+            </div>
+            <span>
+			    {toDoList.length === 0 ? "No pending tasks":  `${toDoList.length} pending tasks`}
+            </span>			
+        </div>
     );
 };
 
 
 export default AddTask;
 
-{/*onClick={NewTask(value)}*/}
-{/*const validateInput = () => {
+/*onClick={NewTask(value)}*/
+/*const validateInput = () => {
         if(value==='')
             alert("You must have something to do!")
         else ('')
-    }    */}
+    }    */
