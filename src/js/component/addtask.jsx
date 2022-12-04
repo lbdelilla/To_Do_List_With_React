@@ -6,7 +6,7 @@ import { useEffect } from "react/cjs/react.production.min";
 
 const AddTask = () => {
     const [inputValue, setInputValue] = React.useState('');
-    const [toDoList, setToDoList] = React.useState(['Eat']);
+    const [toDoList, setToDoList] = React.useState(['Eat', 'Sleep', 'Repeat']);
     
 
    {/*useEffect(() => {
@@ -29,10 +29,9 @@ const AddTask = () => {
     return(
         <div className="taskManager text-center">	
             <div className="otrodiv">	
-                <div className=" text-center">
+                <div className="form text-center">
                     <input value={inputValue} type="text" onKeyPress={(e)=>e.key=="Enter" ? tasker() : null} onChange= {(e) => setInputValue(e.target.value)} />
-                    <button className="button-1" role="button" type="submit" > Add </button>
-                    <hr className="line"/>
+                    <button className="button-1" role="button" type="submit" onClick={()=>tasker()}> Add </button>
                 </div>
                 <div className="content">
                     <ul>

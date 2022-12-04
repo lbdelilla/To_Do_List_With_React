@@ -1,125 +1,105 @@
-h1 {
-    font-family: 'Nerko One', cursive;
-    color: #f6c0be;
-    text-shadow: 2px 1px 1px #3e8baa;
-    font-size: 68px;
-}
-
 body {
     background-color: #99dbd9;
 }
 
-.footer{
-    font-family: 'Nerko One', cursive;
-    color: #f6c0be;
-    text-shadow: 2px 1px 1px #3e8baa;
-    font-size: 25px;
-    font-weight: 100;
-    
-}
-
 .taskManager {
     background-color: #f0e5c7;
-    height: 450px;
-    width: 400px;
-    margin: 30px auto;
     border-radius: 20px;
     box-shadow: 1px 1px 1px grey;
-    display: flex;
     flex-direction: column;
-    align-content: center;
+    align-self: center;  
+
+}
+
+.taskManager, .content, .toDoList, li{
+    display: flex;
     justify-content: space-between;
-    
+}
+
+.toDoList{
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1, span, li, input, .button-1, .footer {
+    font-family: 'Nerko One', cursive;
+}
+
+h1, .footer {
+    color: #f6c0be;
+    text-shadow: 2px 1px 1px #3e8baa;
+    font-weight: 100;
+}
+
+input, li {
+    color:#3e8baa;
+    font-size: 1.5vw;
+}
+
+h1 {
+    font-size: 4.4vw;
+ 
 }
 
 input {
-    margin: 30px 10px 10px 0px;
-    width: 290px;
+    margin: 10px;
+    width: 18vw;
     border: 3px solid #99dbd9;;
     border-radius: 8px;
-    font-family: 'Nerko One', cursive;
-    background-color:  #fff1f0;
-    outline: none;
-    font-size: 22px;
-    color:#3e8baa  
+    background-color:  #fdecec;
+    outline: none; 
 }
 
-.line{
-    width: 350px;
-    margin: 10px auto;
-    color: #3e8baa;
-    opacity: 0.2;
+.footer{
+    font-size: 1.5vw;
 }
 
 ul {
     width: 100%;
     padding: 0px;
 }
+
 li{
-    font-family: 'Nerko One', cursive;
-    color:#3e8baa;
-    font-size: 25px;
     margin: 10px 25px 0px 25px;
     list-style: none;
     border-bottom: 1px solid #3e8baa2a;
-    display: flex;
     justify-content: space-between;
-    padding-bottom: 10px;
-    
+    padding-bottom: 10px;  
 }
-
-.button-1 {
-  background-color: #99dbd9;
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  display: inline-block;
-  font-family: 'Nerko One', cursive;
-  font-size: 20px;
-  height: 40px;
-  width: 50px;
-  box-shadow: 1px 1px 4px #aeb4b4;
-}
-
-.button-1:hover,
-.button-1:focus {
-  background-color:  #67cfcc;
-}
-
-.fa-solid{
-    font-size: 25px;
-    background-color:#99dbd9;
-    border-radius: 8px;
-    border:none;
-    box-shadow: 1px 1px 4px #aeb4b4; 
-    cursor: pointer;
-    padding: 5px 7px 5px 7px;
-    color: white;
-
-}
-
-.fa-solid:hover,
-.fa-solid:focus {
-  background-color:  #67cfcc;
-}
-
-
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.toDoList{
-    display: flex;
-    flex-direction: column;
-}
-
 
 span {
     opacity: 0.5;
-    font-family: 'Nerko One', cursive;
     margin-bottom: 5px;
     color: #3e8baa;
+    font-size: 1vw;
+}
+
+.button-1 {
+    border-style: none;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 5.35vh;
+    width: 3.5vw;
+    margin-right: 1vw;
+ 
+}
+
+.button-1, .fa-solid{
+    color: #FFFFFF;
+    background-color: #99dbd9;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #aeb4b4;
+    font-size: 1.5vw;
+}
+
+.button-1:hover,
+.button-1:focus,
+.fa-solid:hover,
+.fa-solid:focus {
+    background-color:  #67cfcc;
+}
+
+.fa-solid{
+    cursor: pointer;
+    padding: 5px 7px 5px 7px;
 }
