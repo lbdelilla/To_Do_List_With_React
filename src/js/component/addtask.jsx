@@ -1,7 +1,4 @@
 import React, {useState} from "react";
-import { useEffect } from "react/cjs/react.production.min";
-
-
 
 
 const AddTask = () => {
@@ -9,9 +6,7 @@ const AddTask = () => {
     const [toDoList, setToDoList] = React.useState(['Eat', 'Sleep', 'Repeat']);
     
 
-   {/*useEffect(() => {
-       
-   });*/}
+   
     function tasker () {
         if(inputValue.length != 0){
             setToDoList([...toDoList, inputValue]);
@@ -36,8 +31,8 @@ const AddTask = () => {
                 <div className="content">
                     <ul>
                         {toDoList.map((task, index)=> {
-                        return(
-                        <li  key={index}> {task} <i onClick={()=>deleteTask(index)} className="fa-solid fa-xmark"></i></li>)})}
+                        return(   
+                        <li className="sen" key={index}> {task} <i onClick={()=>deleteTask(index)} className="fa-solid fa-xmark"></i></li>)})}
                     </ul>		
                 </div>	
             </div>

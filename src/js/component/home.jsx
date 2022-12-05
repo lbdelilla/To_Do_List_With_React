@@ -14,7 +14,7 @@ const Home = () => {
 			</div>
 			<AddTask/>
 			<div className="footer text-center">
-				Made by <strong>Lulu Belén</strong>, with ❤️!
+				Made by <a href="https://github.com/lbdelilla" target="_blank">Lulu Belén</a>, with ❤️!
 			</div>
 		</div>
 	);
